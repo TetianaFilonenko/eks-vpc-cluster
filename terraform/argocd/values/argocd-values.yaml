@@ -1,0 +1,27 @@
+server:
+  service:
+    type: ClusterIP
+  extraArgs:
+    - --insecure
+
+configs:
+  params:
+    server.insecure: true
+
+rbac:
+  create: true
+
+dex:
+  enabled: false
+
+notifications:
+  enabled: false
+
+applicationSet:
+  enabled: false
+
+controller:
+  replicas: 1
+
+repoServer:
+  replicas: 1
