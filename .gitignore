@@ -1,0 +1,25 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+
+crash.log
+
+# Terraform lock (МОЖНА залишити, але краще комітити)
+# *.lock.hcl
+
+# Sensitive data
+*.tfvars
+*.tfvars.json
+*.auto.tfvars
+
+# CLI config
+.terraformrc
+terraform.rc
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
