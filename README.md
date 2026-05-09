@@ -19,6 +19,7 @@ Official Terraform modules used:
 
 ## Project Structure
 
+```
 eks-vpc-cluster/
 ├── main.tf
 ├── variables.tf
@@ -32,12 +33,13 @@ eks-vpc-cluster/
 │   ├── outputs.tf
 │   ├── terraform.tf
 │   └── backend.tf
-├── eks/
-│   ├── main.tf
-│   ├── variables.tf
-│   ├── outputs.tf
-│   ├── terraform.tf
-│   └── backend.tf
+└── eks/
+    ├── main.tf
+    ├── variables.tf
+    ├── outputs.tf
+    ├── terraform.tf
+    └── backend.tf
+```
 
 ---
 
@@ -54,23 +56,30 @@ eks-vpc-cluster/
 
 1. Initialize Terraform
 
+```bash
 terraform init
+```
 
 2. Validate configuration
 
+```bash
 terraform validate
+```
 
 3. Create infrastructure
 
+```bash
 terraform apply
+```
 
 ---
 
 ## Connect to EKS
 
+```bash
 aws eks --region eu-central-1 update-kubeconfig --name lab-eks-cluster
-
 kubectl get nodes
+```
 
 ---
 
@@ -87,6 +96,8 @@ After running Terraform:
 
 ## Destroy infrastructure
 
+```bash
 terraform destroy
+```
 
-Important: Always destroy resources after use to avoid unnecessary AWS costs.
+> **Important:** Always destroy resources after use to avoid unnecessary AWS costs.
