@@ -11,6 +11,7 @@ This project creates AWS infrastructure using Terraform:
   - GPU
 
 Official Terraform modules used:
+
 - terraform-aws-modules/vpc/aws
 - terraform-aws-modules/eks/aws
 
@@ -51,15 +52,15 @@ eks-vpc-cluster/
 
 ## Usage
 
-### 1. Initialize Terraform
+1. Initialize Terraform
 
 terraform init
 
-### 2. Validate configuration
+2. Validate configuration
 
 terraform validate
 
-### 3. Create infrastructure
+3. Create infrastructure
 
 terraform apply
 
@@ -89,9 +90,3 @@ After running Terraform:
 terraform destroy
 
 Important: Always destroy resources after use to avoid unnecessary AWS costs.
-
----
-
-## Author
-
-Tetiana Filonenko
