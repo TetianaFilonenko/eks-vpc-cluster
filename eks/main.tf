@@ -19,7 +19,6 @@ module "eks" {
 
   cluster_endpoint_public_access = true
 
-  # 🔴 ВАЖЛИВО — ВИМКНУЛИ KMS (щоб не платити)
   create_kms_key            = false
   cluster_encryption_config = {}
 
@@ -34,8 +33,8 @@ module "eks" {
       instance_types = ["t3.micro"]
 
       min_size     = 1
-      max_size     = 1
-      desired_size = 1
+      max_size     = 2
+      desired_size = 2
 
       labels = {
         workload = "cpu"
@@ -47,8 +46,8 @@ module "eks" {
       instance_types = ["t3.micro"]
 
       min_size     = 1
-      max_size     = 1
-      desired_size = 1
+      max_size     = 2
+      desired_size = 2
 
       labels = {
         workload = "gpu"
