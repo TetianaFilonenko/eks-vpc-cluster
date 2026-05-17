@@ -1,13 +1,3 @@
-provider "kubernetes" {
-  config_path = "~/.kube/config"
-}
-
-provider "helm" {
-  kubernetes {
-    config_path = "~/.kube/config"
-  }
-}
-
 resource "kubernetes_namespace" "argocd" {
   metadata {
     name = var.argocd_namespace
@@ -15,8 +5,8 @@ resource "kubernetes_namespace" "argocd" {
 }
 
 resource "helm_release" "argocd" {
-  name       = "argocd"
-  namespace  = kubernetes_namespace.argocd.metadata[0].name
+  name      = "argocd"
+  namespace = kubernetes_namespace.argocd.metadata[0].name
 
   repository = "https://argoproj.github.io/argo-helm"
   chart      = "argo-cd"
@@ -26,5 +16,5 @@ resource "helm_release" "argocd" {
     file("${path.module}/values/argocd-values.yaml")
   ]
 
-  timeout = 600
+  timeout = 900
 }

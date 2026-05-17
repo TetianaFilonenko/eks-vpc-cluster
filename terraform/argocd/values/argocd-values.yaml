@@ -11,6 +11,9 @@ configs:
 rbac:
   create: true
 
+timeouts:
+  reconciliation: 180s
+
 dex:
   enabled: false
 
