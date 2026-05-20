@@ -33,8 +33,8 @@ module "eks" {
       instance_types = ["t3.micro"]
 
       min_size     = 1
-      max_size     = 2
-      desired_size = 2
+      max_size     = 5
+      desired_size = 4
 
       labels = {
         workload = "cpu"
@@ -46,8 +46,8 @@ module "eks" {
       instance_types = ["t3.micro"]
 
       min_size     = 1
-      max_size     = 2
-      desired_size = 2
+      max_size     = 4
+      desired_size = 3
 
       labels = {
         workload = "gpu"
